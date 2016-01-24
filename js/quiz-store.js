@@ -1,6 +1,6 @@
 var quiz = JSON.parse(window.localStorage.getItem('quiz'));
-var minutes = 5;
-var seconds = 0;
+var minutes = JSON.parse(window.localStorage.getItem('minutes')) || 5;
+var seconds = JSON.parse(window.localStorage.getItem('seconds')) || 0;
 
 const randomizeQuiz = function(){
   var temp = quiz.slice(0);
@@ -35,6 +35,8 @@ const QuizStore = {
     if(m>=0 && m<60 && s>=0 && s<60){
       minutes = m;
       seconds = s;
+      window.localStorage.setItem('minutes', JSON.stringify(minutes));
+      window.localStorage.setItem('seconds', JSON.stringify(seconds));
     }
   }
 };
