@@ -87,7 +87,7 @@ const Quiz = React.createClass({
     }, 1000);
   },
   startNewQuiz(){
-    window.location.href = '/#/create';
+    window.location.href = '#/create';
   },
   render(){
     const actions = [

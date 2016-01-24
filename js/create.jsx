@@ -65,7 +65,7 @@ const Create = React.createClass({
     }
     QuizStore.setQuiz(this.state.questions);
     QuizStore.setDuration(this.state.minutes, this.state.seconds);
-    window.location.href = '/#/quiz';
+    window.location.href = '#/quiz';
   },
 
   openDialog(){
